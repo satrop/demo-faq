@@ -1,0 +1,59 @@
+/* inter-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/inter-v18-latin-regular.woff2") format("woff2");
+}
+
+/* inter-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/inter-v18-latin-600.woff2") format("woff2");
+}
+
+:root {
+  // Colors
+  --blue: #4e80ee;
+  --black: #030616;
+  --gray: #d2d5da;
+  --offWhite: #f8fafc;
+
+  // Spacing
+  --space-1: 1rem; // 16px
+  --space-2: 2rem; // 32px
+  --space-3: 3rem; // 48px
+  --space-4: 4rem; // 64px
+  --space-5: 5rem; // 80px
+
+  --pad-1: 1rem; // 16px
+  --pad-2: 2rem; // 32px
+  --pad-3: 3rem; // 48px
+  --pad-4: 4rem; // 64px
+  --pad-5: 5rem; // 80px
+}
+
+// Resets
+h1,
+h2,
+p {
+  margin: 0;
+  text-wrap: balance;
+}
+
+// Page Styles
+body {
+  background-color: var(--offWhite);
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+header,
+section {
+  padding: clamp(var(--pad-2), 5vw, var(--pad-4));
+}

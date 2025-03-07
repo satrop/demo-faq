@@ -1,0 +1,18 @@
+---
+import ArticleComponent from './ArticleComponent.astro';
+---
+
+<section>
+  <ArticleComponent 
+    title="Article Title" 
+    paragraph1="This is the first paragraph." 
+    list={{ type: 'ul', items: [
+      'List item no link', 
+      'Go to the Order <a href="/dummy-link/">Tracking page.</a>',
+      'Another non linking list item'
+    ]}} 
+    paragraph2="This is the second paragraph."
+  />
+</section>
+
+<!-- <a href="/dummy-link/"></a> -->

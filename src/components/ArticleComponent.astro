@@ -1,0 +1,34 @@
+---
+interface ListItem {
+  type: 'ol' | 'ul';
+  items: string[];
+}
+
+const { title, paragraph1, list, paragraph2 } = Astro.props as {
+  title: string;
+  paragraph1?: string;
+  list: ListItem;
+  paragraph2?: string;
+};
+---
+
+<article>
+  <h2>{title}</h2>
+  {paragraph1 && <p>{paragraph1}</p>}
+  <section>
+    {list.type === 'ol' ? (
+      <ol>
+        {list.items.map(item => (
+          <li set:html={item} />
+        ))}
+      </ol>
+    ) : (
+      <ul>
+        {list.items.map(item => (
+          <li set:html={item} />
+        ))}
+      </ul>
+    )}
+  </section>
+  {paragraph2 && <p>{paragraph2}</p>}
+</article>
