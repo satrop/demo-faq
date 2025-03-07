@@ -14,7 +14,7 @@ const { title, paragraph1, list, paragraph2 } = Astro.props as {
 
 <article>
   <h2>{title}</h2>
-  {paragraph1 && <p>{paragraph1}</p>}
+  {paragraph1 && <p set:html={paragraph1} />}
   <section>
     {list.type === 'ol' ? (
       <ol>
@@ -30,5 +30,5 @@ const { title, paragraph1, list, paragraph2 } = Astro.props as {
       </ul>
     )}
   </section>
-  {paragraph2 && <p>{paragraph2}</p>}
+  {paragraph2 && <p set:html={paragraph2} />}
 </article>

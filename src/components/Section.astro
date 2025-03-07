@@ -4,15 +4,24 @@ import ArticleComponent from './ArticleComponent.astro';
 
 <section>
   <ArticleComponent 
-    title="Article Title" 
-    paragraph1="This is the first paragraph." 
-    list={{ type: 'ul', items: [
-      'List item no link', 
+    title="How can I track my order?" 
+    paragraph1="You can track your order by visiting our <a href='/dummy-link/'>tracking page</a>." 
+    list={{ type: 'ol', items: [
       'Go to the Order <a href="/dummy-link/">Tracking page.</a>',
-      'Another non linking list item'
+      'Enter your order number and email address.',
+      'Click on the Track Order button to view the current status of your shipment.'
     ]}} 
-    paragraph2="This is the second paragraph."
+    paragraph2='If you encounter any issues, please visit our <a href="/dummy-link/">Help Center</a>.'
+  />
+
+  <ArticleComponent 
+    title="What is your return policy?" 
+    paragraph1="We offer a 30-day return policy on most items. Here are some key points" 
+    list={{ type: 'ul', items: [
+      '<strong>Items must be in original condition:</strong> Unworn, unused, and unwashed',
+      '<strong>Include original packaging and tags:</strong> All items should be returned with their original packaging and tags.',
+      '<strong>Proof of purchase:</strong> A receipt or proof of purchase is required.',
+    ]}} 
+    paragraph2='For more detailed information, read our full <a href="/dummy-link/">Return Policy.</a>'
   />
 </section>
-
-<!-- <a href="/dummy-link/"></a> -->
