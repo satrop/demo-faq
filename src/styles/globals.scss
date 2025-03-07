@@ -25,7 +25,9 @@
 
   // Spacing
   --space-1: 1rem; // 16px
+  --space-1-5: 1.5rem; // 24px
   --space-2: 2rem; // 32px
+  --space-2-5: 2.5rem; // 40px
   --space-3: 3rem; // 48px
   --space-4: 4rem; // 64px
   --space-5: 5rem; // 80px
@@ -51,9 +53,16 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   font-weight: 400;
+  color: var(--black);
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
 }
 
 header,
 section {
-  padding: clamp(var(--pad-2), 5vw, var(--pad-4));
+  padding-block: var(--pad-4);
+  padding-inline: clamp(var(--pad-2), 5vw, var(--pad-4));
 }

@@ -15,7 +15,6 @@ const { title, paragraph1, list, paragraph2 } = Astro.props as {
 <article>
   <h2>{title}</h2>
   {paragraph1 && <p set:html={paragraph1} />}
-  <section>
     {list.type === 'ol' ? (
       <ol>
         {list.items.map(item => (
@@ -29,6 +28,31 @@ const { title, paragraph1, list, paragraph2 } = Astro.props as {
         ))}
       </ul>
     )}
-  </section>
   {paragraph2 && <p set:html={paragraph2} />}
 </article>
+
+<style lang="scss">
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2-5);
+    border-bottom: solid 1px var(--gray);
+    padding-bottom: var(--space-2-5);
+    margin-bottom: var(--space-2-5);
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  ol,
+  ul {
+    padding: 0;
+    margin: 0 0 0 var(--space-1);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1-5);
+  }
+</style>
